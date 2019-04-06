@@ -3,12 +3,13 @@ var fifteen = require('./fifteen-counter')
 var pair = require('./pair-counter')
 var run = require('./run-counter')
 var flush = require('./flush-checker')
-var hand = ['5h', '2s', 'ad', 'kc', '3h']
+
+var hand = process.argv.slice(2)
 
 var handValue = function(arr){
   output =[]
   arr.forEach(function(card){
-    output.push(cardList[card].value)
+    output.push(cardList[card.toLowerCase()].value)
   })
   return output
 }
@@ -16,7 +17,7 @@ var handValue = function(arr){
 var handFace = function(arr){
   output =[]
   arr.forEach(function(card){
-    output.push(cardList[card].face)
+    output.push(cardList[card.toLowerCase()].face)
   })
   return output
 }
@@ -24,13 +25,13 @@ var handFace = function(arr){
 var handSuit = function(arr){
   output =[]
   arr.forEach(function(card){
-    output.push(cardList[card].suit)
+    output.push(cardList[card.toLowerCase()].suit)
   })
   return output
 }
 
 
-console.log(handValue(hand))
+console.log(hand)
 
 var score = fifteen(handValue(hand)) + pair(handFace(hand)) + run(handFace(hand)) + flush(handSuit(hand))
 

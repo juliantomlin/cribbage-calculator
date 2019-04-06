@@ -15,6 +15,9 @@ var counter = function (arr) {
               if (arr[i] + arr[k] + arr[m] + arr[p] === 15){
                 points += 2;
               }
+              else if ((i === 0) && (arr[i] + arr[k] + arr[m] + arr[p] + arr[p+1] === 15)){
+                points += 2;
+              }
             }
           }
         }
