@@ -157,4 +157,5 @@ var cardList = {
         suit: 'dimond' },
 }
 
+
 module.exports = cardList
