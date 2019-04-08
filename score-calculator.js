@@ -4,8 +4,6 @@ var pair = require('./pair-counter')
 var run = require('./run-counter')
 var flush = require('./flush-checker')
 
-var hand = process.argv.slice(2)
-
 var handValue = function(arr){
   output =[]
   arr.forEach(function(card){
@@ -31,8 +29,7 @@ var handSuit = function(arr){
 }
 
 
-console.log(hand)
 
-var score = fifteen(handValue(hand)) + pair(handFace(hand)) + run(handFace(hand)) + flush(handSuit(hand))
-
-console.log(score)
+module.exports = function (hand) {
+  return fifteen(handValue(hand)) + pair(handFace(hand)) + run(handFace(hand)) + flush(handSuit(hand))
+}

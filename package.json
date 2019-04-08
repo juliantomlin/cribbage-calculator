@@ -1,0 +1,19 @@
+{
+  "name": "cribbage-calculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "score-calculator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juliantomlin/cribbage-calculator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juliantomlin/cribbage-calculator/issues"
+  },
+  "homepage": "https://github.com/juliantomlin/cribbage-calculator#readme"
+}
