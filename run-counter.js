@@ -17,7 +17,7 @@ var runChecker = function (arr) {
       multiple = 1
     }
     if (run > 2){
-      if((multiple == 3) && (arr[1] != arr[3])){
+      if((multiple == 3) && ((arr[1] != arr[3])) && (arr[0] != arr[2]) && (arr[2] != arr[4])){
         multiple = 4
       }
       score = run * multiple
