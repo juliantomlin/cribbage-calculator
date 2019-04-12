@@ -3,6 +3,7 @@ var fifteen = require('./fifteen-counter')
 var pair = require('./pair-counter')
 var run = require('./run-counter')
 var flush = require('./flush-checker')
+var nob = require('./nob-checker')
 
 var handValue = function(arr){
   output =[]
@@ -31,5 +32,5 @@ var handSuit = function(arr){
 
 
 module.exports = function (hand) {
-  return fifteen(handValue(hand)) + pair(handFace(hand)) + run(handFace(hand)) + flush(handSuit(hand))
+  return fifteen(handValue(hand)) + pair(handFace(hand)) + run(handFace(hand)) + flush(handSuit(hand)) + nob(handFace(hand), handSuit(hand))
 }
